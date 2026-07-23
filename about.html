@@ -58,7 +58,9 @@ nav a:hover,nav a.act{color:var(--gold)}
 .phero h1{font-family:var(--serif);font-weight:300;font-size:clamp(1.9rem,4.6vw,3.6rem);line-height:1.55;letter-spacing:.06em;color:var(--s0);margin:.7em 0 .4em}
 .phero h1 em{font-style:normal;color:var(--gold)}
 .phero .en{font-family:var(--eng);font-style:italic;font-size:1rem;letter-spacing:.12em;color:var(--gold)}
-.phero .sub{max-width:34em;color:var(--s2);font-size:.92rem;margin-top:1.2em}
+.phero-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:4rem;align-items:center}
+.phero-right p{color:var(--s2);font-size:.92rem;margin-bottom:1.4em}
+.phero-right p:last-child{margin-bottom:0}
 
 /* common section */
 section{position:relative;z-index:1;padding:8rem 6vw}
@@ -165,9 +167,17 @@ footer{border-top:1px solid var(--border);padding:4.5rem 6vw 3rem;background:var
 <div class="phero">
   <div class="watermark">About</div>
   <p class="eyebrow">About Us — Our Philosophy</p>
-  <h1>守られよ、<br>さらば<em>攻められん</em>。</h1>
-  <p class="en">When Your Shield is Strong, Your Sword is Sharp.</p>
-  <p class="sub">「守り」とは、不安に奪われる時間を減らすこと。<br>「攻め」とは、未来に夢中になっている状態のこと。<br><br>守りを整えることで、はじめて未来に夢中になれる。<br><br>私たちが、すべてのご提案の土台に置いている考え方です。</p>
+  <div class="phero-grid">
+    <div>
+      <h1>守られよ、<br>さらば<em>攻められん</em>。</h1>
+      <p class="en">When Your Shield is Strong, Your Sword is Sharp.</p>
+    </div>
+    <div class="phero-right">
+      <p>「守り」とは、不安に奪われる時間を減らすこと。<br>「攻め」とは、未来に夢中になっている状態のこと。</p>
+      <p>守りを整えることで、はじめて未来に夢中になれる。</p>
+      <p>私たちが、すべてのご提案の土台に置いている考え方です。</p>
+    </div>
+  </div>
 </div>
 
 <!-- Mission -->
