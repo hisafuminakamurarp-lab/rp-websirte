@@ -11,7 +11,10 @@
 <meta property="og:description" content="家計・資産形成・住まい・キャリア。人生全体をひとつの設計図に。初回相談無料。">
 <meta property="og:url" content="https://www.rock-ptarmigan.com/">
 <meta property="og:site_name" content="ROCK PTARMIGAN">
+<meta property="og:image" content="https://www.rock-ptarmigan.com/logo.png">
 <meta property="og:locale" content="ja_JP">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+JP:wght@200;300;400;600&family=Noto+Sans+JP:wght@300;400;500&family=Space+Mono&display=swap" rel="stylesheet">
@@ -39,6 +42,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:
   padding:18px 4vw;background:linear-gradient(rgba(7,16,31,.92),rgba(7,16,31,.75) 70%,transparent);backdrop-filter:blur(6px)}
 .logo{font-family:var(--eng);font-size:1.05rem;letter-spacing:.35em;color:var(--s0);display:flex;align-items:center;gap:.6em}
 .logo .mark{font-family:var(--eng);font-style:italic;color:var(--gold);font-size:1.2em}
+.logo .logo-mark-img{height:2.1em;width:auto;display:block}
 nav{display:flex;align-items:center;gap:2.2em;font-family:var(--mono);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase}
 nav a{color:var(--s2);transition:color .3s}
 nav a:hover{color:var(--gold)}
@@ -49,8 +53,7 @@ nav a:hover{color:var(--gold)}
 /* ---------- hero ---------- */
 .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:0 6vw;z-index:1;
   background:radial-gradient(120% 90% at 75% 10%,var(--mid) 0%,var(--deep) 45%,var(--ink) 100%)}
-.hero .watermark{position:absolute;right:-2vw;top:8vh;font-family:var(--eng);font-style:italic;font-weight:300;
-  font-size:clamp(16rem,34vw,30rem);line-height:1;color:transparent;-webkit-text-stroke:1px rgba(180,205,235,.07);user-select:none;pointer-events:none}
+.hero .hero-wing{position:absolute;right:5vw;top:50%;transform:translateY(-52%);width:clamp(280px,36vw,560px);opacity:.07;pointer-events:none;user-select:none}
 .eyebrow{font-family:var(--mono);font-size:.68rem;letter-spacing:.4em;color:var(--s3);text-transform:uppercase;display:flex;align-items:center;gap:1em}
 .eyebrow::before{content:'';display:block;width:3em;height:1px;background:var(--s4)}
 .hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(1.9rem,4.6vw,3.8rem);line-height:1.65;letter-spacing:.06em;color:var(--s0);margin:.7em 0 .5em}
@@ -188,7 +191,7 @@ footer{border-top:1px solid var(--border);padding:4.5rem 6vw 3rem;background:var
 </head><body>
 
 <header>
-  <a class="logo" href="index.html"><span class="mark">✦</span>ROCK PTARMIGAN</a>
+  <a class="logo" href="index.html"><img class="logo-mark-img" src="logo.png" alt="">ROCK PTARMIGAN</a>
   <button class="menu-btn" onclick="document.querySelector('nav').classList.toggle('open')">MENU</button>
   <nav>
     <a href="about.html">About Us</a>
@@ -201,7 +204,7 @@ footer{border-top:1px solid var(--border);padding:4.5rem 6vw 3rem;background:var
 
 <!-- HERO -->
 <div class="hero">
-  <div class="watermark">R</div>
+  <img class="hero-wing" src="logo.png" alt="">
   <p class="eyebrow">Rock Ptarmigan Co., Ltd.</p>
   <h1>不安に追われる時間を減らし、<br><em>未来に夢中になれる時間</em>を増やす。</h1>
   <p class="sub">お金のこと。仕事のこと。住まいのこと。将来を考えるたびに、不安や迷いばかりが増えていませんか。家計、資産形成、住まい、転職、起業。一つひとつを別々に考えるのではなく、人生全体をひとつの設計図として整理する。ROCK PTARMIGANは、目の前の不安を整え、自分らしい未来へ進むためのライフデザインをサポートします。</p>
@@ -365,7 +368,7 @@ footer{border-top:1px solid var(--border);padding:4.5rem 6vw 3rem;background:var
 <footer>
   <div class="f-grid">
     <div class="f-brand">
-      <a class="logo" href="index.html"><span class="mark">✦</span>ROCK PTARMIGAN</a>
+      <a class="logo" href="index.html"><img class="logo-mark-img" src="logo.png" alt="">ROCK PTARMIGAN</a>
       <p>株式会社ROCK PTARMIGAN<br>〒161-0034 東京都新宿区上落合2丁目21番10号<br>TEL：03-6766-8441／代表直通：070-9348-5985</p>
     </div>
     <div class="f-col">
