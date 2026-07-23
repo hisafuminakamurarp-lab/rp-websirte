@@ -82,6 +82,10 @@ h2.sec-title em{font-style:normal;color:var(--gold)}
 .access-list li::before{content:'✦';color:var(--gold);font-size:.7em}
 .access-list .min{color:var(--gold)}
 .addr{color:var(--s2);font-size:.92rem;margin-bottom:2rem}
+.map-wrap{margin-top:3rem;border:1px solid var(--bord2);background:var(--deep)}
+.map-wrap iframe{width:100%;height:420px;display:block;border:0;filter:grayscale(1) invert(.92) hue-rotate(180deg) contrast(.92)}
+.map-link{display:inline-flex;align-items:center;gap:.6em;margin-top:1.2rem;font-family:var(--mono);font-size:.65rem;letter-spacing:.25em;color:var(--gold);text-transform:uppercase;border-bottom:1px solid rgba(200,184,130,.4);padding-bottom:.3em;transition:color .3s}
+.map-link:hover{color:var(--s0)}
 
 /* cta */
 .cta{background:radial-gradient(90% 120% at 50% 100%,var(--lift) 0%,var(--deep) 55%,var(--ink) 100%);text-align:center;padding:10rem 6vw}
@@ -185,6 +189,10 @@ footer{border-top:1px solid var(--border);padding:4.5rem 6vw 3rem;background:var
     <li>西武新宿線「中井駅」<span class="min">徒歩3分</span></li>
     <li>東京メトロ東西線「落合駅」4番出口 <span class="min">徒歩6分</span></li>
   </ul>
+  <div class="map-wrap rv">
+    <iframe src="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%B0%E5%AE%BF%E5%8C%BA%E4%B8%8A%E8%90%BD%E5%90%882%E4%B8%81%E7%9B%AE21%E7%95%AA10%E5%8F%B7&z=17&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="株式会社ROCK PTARMIGAN 所在地の地図"></iframe>
+  </div>
+  <a class="map-link rv" href="https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%B0%E5%AE%BF%E5%8C%BA%E4%B8%8A%E8%90%BD%E5%90%882%E4%B8%81%E7%9B%AE21%E7%95%AA10%E5%8F%B7" target="_blank" rel="noopener">Googleマップで開く →</a>
 </section>
 
 <!-- CTA -->
