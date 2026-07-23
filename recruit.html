@@ -58,7 +58,10 @@ nav a:hover,nav a.act{color:var(--gold)}
 .phero h1{font-family:var(--serif);font-weight:300;font-size:clamp(1.9rem,4.6vw,3.6rem);line-height:1.55;letter-spacing:.06em;color:var(--s0);margin:.7em 0 .4em}
 .phero h1 em{font-style:normal;color:var(--gold)}
 .phero .en{font-family:var(--eng);font-style:italic;font-size:1rem;letter-spacing:.12em;color:var(--gold)}
-.phero .sub{max-width:36em;color:var(--s2);font-size:.92rem;margin-top:1.2em}
+.phero-body{max-width:38em;margin-top:1.6em}
+.phero-body p{color:var(--s2);font-size:.95rem;margin-bottom:1.3em}
+.phero-body p:last-child{margin-bottom:0}
+.phero-body .hl{color:var(--gold)}
 
 /* common section */
 section{position:relative;z-index:1;padding:8rem 6vw}
@@ -139,21 +142,19 @@ footer{border-top:1px solid var(--border);padding:4.5rem 6vw 3rem;background:var
 <div class="phero">
   <div class="watermark">Recruit</div>
   <p class="eyebrow">Recruit — We're Hiring</p>
-  <h1>共に未来を創る、<em>仲間</em>へ。</h1>
-  <p class="en">We're looking for those who create the future.</p>
+  <h1>まずは、<em>あなたのこと</em>を<br>聞かせてください。</h1>
+  <div class="phero-body">
+    <p>私たちは、学歴や経歴だけで人を判断しません。</p>
+    <p>これまで何をしてきたかだけではなく、これから何をしてみたいのか。<br>どんなことが得意で、どんな自分になりたいのか。</p>
+    <p>まだ明確な答えがなくても大丈夫です。</p>
+    <p>一人ひとりの個性や可能性を大切にしながら、仲間と学び、<span class="hl">ともに成長していける場所</span>をつくりたいと考えています。</p>
+    <p>少しでも興味を持っていただけたら、まずは気軽にお話ししましょう。</p>
+  </div>
 </div>
-
-<!-- message -->
-<section class="message">
-  <div class="sec-head rv"><span class="sec-num">01</span><span class="sec-label">— Message</span></div>
-  <h2 class="sec-title rv">まずは、<em>あなたのこと</em>を<br>聞かせてください。</h2>
-  <div class="msg-wrap rv">
-    <blockquote>私たちは、学歴や経歴だけで人を判断しません。<br><br>これまで何をしてきたかだけではなく、これから何をしてみたいのか。<br>どんなことが得意で、どんな自分になりたいのか。<br><br>まだ明確な答えがなくても大丈夫です。<br><br>一人ひとりの個性や可能性を大切にしながら、仲間と学び、<em>ともに成長していける場所</em>をつくりたいと考えています。<br><br>少しでも興味を持っていただけたら、まずは気軽にお話ししましょう。</blockquote>  </div>
-</section>
 
 <!-- flow -->
 <section class="flow" id="process">
-  <div class="sec-head rv"><span class="sec-num">02</span><span class="sec-label">— Process 選考フロー</span></div>
+  <div class="sec-head rv"><span class="sec-num">01</span><span class="sec-label">— Process 選考フロー</span></div>
   <h2 class="sec-title rv">選考の<em>流れ</em>。</h2>
   <p class="sec-lede rv">まずはエントリーから。堅苦しく考えず、お互いを知るところから始めましょう。</p>
   <div class="flow-steps rv">
