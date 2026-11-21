@@ -154,3 +154,20 @@ h1,h2,.big{word-break:auto-phrase}
 /* concerns: 3 cards in one row (no orphan cells) */
 .worry-grid{grid-template-columns:repeat(3,1fr)}
 @media(max-width:860px){.worry-grid{grid-template-columns:1fr}}
+
+/* about: statement-only mission / vision */
+.mv-solo .mv-left{max-width:none}
+.mv-solo .mv-left h2{font-size:clamp(1.7rem,3.6vw,3rem)}
+.mv-solo .mv-left .en{color:var(--s3)}
+
+/* about: values as a list of one-line statements */
+.val-list{grid-template-columns:1fr!important}
+.val-list .val{display:grid;grid-template-columns:4.5rem 15rem 1fr;align-items:center;gap:1.5rem;padding:2em 2.4em}
+.val-list .v-head{display:flex;align-items:baseline;gap:1em}
+.val-list .val h3{margin:0;font-size:1.5rem;letter-spacing:.3em}
+.val-list .val p{margin:0;font-family:var(--serif);font-size:1.02rem;color:var(--s1)}
+@media(max-width:860px){
+  .val-list .val{grid-template-columns:3rem 1fr;gap:.4rem 1rem;padding:1.6em 1.3em}
+  .val-list .val p{grid-column:2;font-size:.95rem}
+  .val-list .val h3{font-size:1.25rem}
+}
