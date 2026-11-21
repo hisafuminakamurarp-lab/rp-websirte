@@ -167,6 +167,7 @@ footer{border-top:1px solid var(--border);padding:4.5rem 6vw 3rem;background:var
     <div class="cf rv">
       <form id="form-body" action="https://formspree.io/f/xgorvwoo" method="POST">
         <input type="hidden" name="_subject" value="【rock-ptarmigan.com】お問い合わせ">
+        <div class="hp-field" aria-hidden="true"><label>ウェブサイト<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
         <div class="cf-label">— Contact Form</div>
         <div class="cf-title">必要情報をご入力ください</div>
         <div class="f2">
@@ -230,19 +231,37 @@ if (new URLSearchParams(location.search).get("type") === "recruit") {
   const sel = document.getElementById("ft");
   [...sel.options].forEach(o => { if (o.text === "採用・入社について") o.selected = true; });
 }
+// 送信先: Google Apps Script（スプレッドシート記録＋メール・Slack通知）。失敗時は Formspree に送る
+const GAS_URL = "https://script.google.com/macros/s/AKfycbwwiGrhnO6z74iRiOWEhiKxUVWThQ4-9xaXZJ_o-DudxHEpZg4lLHQQGPKkYlX44G9p/exec";
+const FORMSPREE_URL = "https://formspree.io/f/xgorvwoo";
+
+async function sendToGas(data) {
+  const params = new URLSearchParams();
+  for (const [k, v] of data.entries()) params.append(k, v);
+  params.append("page", location.href);
+  const res = await fetch(GAS_URL, { method: "POST", body: params });
+  const json = await res.json();
+  if (!json.ok) throw new Error(json.error || "gas");
+}
+async function sendToFormspree(data) {
+  const res = await fetch(FORMSPREE_URL, { method: "POST", body: data, headers: { "Accept": "application/json" } });
+  if (!res.ok) throw new Error("status " + res.status);
+}
+
 form.addEventListener("submit", async function(e) {
   e.preventDefault();
   if (submitBtn.disabled) return;
   const label = submitBtn.innerHTML;
   submitBtn.disabled = true;
   submitBtn.textContent = "送信中…";
+  const data = new FormData(form);
   try {
-    const res = await fetch("https://formspree.io/f/xgorvwoo", {
-      method: "POST",
-      body: new FormData(form),
-      headers: { "Accept": "application/json" }
-    });
-    if (!res.ok) throw new Error("status " + res.status);
+    if (GAS_URL) {
+      try { await sendToGas(data); }
+      catch (gasErr) { await sendToFormspree(data); }
+    } else {
+      await sendToFormspree(data);
+    }
     form.style.display = "none";
     const ok = document.getElementById("ok");
     ok.style.display = "block";

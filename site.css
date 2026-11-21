@@ -225,3 +225,6 @@ h1,h2,.big{word-break:auto-phrase}
 .cta h2{font-size:clamp(1.6rem,3.4vw,2.6rem)!important;margin:.9em 0 .8em!important;line-height:1.6}
 .success .s-title{font-family:var(--serif)!important;font-style:normal!important;font-size:1.5rem!important;letter-spacing:.1em}
 @media(max-width:860px){.cta h2{font-size:clamp(1.4rem,6.4vw,1.9rem)!important}}
+
+/* contact: honeypot field (hidden from people, filled only by bots) */
+.hp-field{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
