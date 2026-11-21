@@ -47,7 +47,7 @@ nav a:not(.nav-cta):hover::after,nav a.act::after{right:0}
   background:url(logo.png) center/contain no-repeat;opacity:.06;pointer-events:none;filter:grayscale(1) brightness(1.4)}
 .hero::after{content:'';position:absolute;left:6vw;right:6vw;bottom:0;height:1px;background:var(--gold-line);opacity:.35}
 .hero > *:not(.scroll-hint){position:relative}
-.hero h1{letter-spacing:.05em}
+.hero h1{letter-spacing:.05em;font-size:clamp(1.9rem,4.1vw,3.6rem)}  /* fits the 19-char second line */
 .hero .sub{color:var(--s1);line-height:2.05}
 
 /* page heroes */
