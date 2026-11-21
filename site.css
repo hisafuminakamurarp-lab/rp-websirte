@@ -150,3 +150,7 @@ h1,h2,.big{word-break:auto-phrase}
   nav.open{height:100dvh}
   .menu-btn{position:relative;z-index:101}
 }
+
+/* concerns: 3 cards in one row (no orphan cells) */
+.worry-grid{grid-template-columns:repeat(3,1fr)}
+@media(max-width:860px){.worry-grid{grid-template-columns:1fr}}
