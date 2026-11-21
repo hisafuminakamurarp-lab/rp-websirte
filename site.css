@@ -216,3 +216,12 @@ h1,h2,.big{word-break:auto-phrase}
 
 /* contact: sending state */
 .fsub:disabled{opacity:.6;cursor:wait}
+
+/* CTA: Japanese heading with a small label (replaces large English display text) */
+.cta-label{display:flex;align-items:center;justify-content:center;gap:1.2em;font-family:var(--mono);font-size:max(.7rem,11px);letter-spacing:.35em;text-transform:uppercase;color:var(--gold)}
+.cta-label span{font-family:var(--serif);letter-spacing:.2em;text-transform:none;color:var(--s3)}
+.cta-label::before,.cta-label::after{content:'';width:48px;height:1px;background:linear-gradient(90deg,transparent,rgba(205,189,136,.7))}
+.cta-label::after{transform:scaleX(-1)}
+.cta h2{font-size:clamp(1.6rem,3.4vw,2.6rem)!important;margin:.9em 0 .8em!important;line-height:1.6}
+.success .s-title{font-family:var(--serif)!important;font-style:normal!important;font-size:1.5rem!important;letter-spacing:.1em}
+@media(max-width:860px){.cta h2{font-size:clamp(1.4rem,6.4vw,1.9rem)!important}}
