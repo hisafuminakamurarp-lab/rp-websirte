@@ -186,3 +186,30 @@ h1,h2,.big{word-break:auto-phrase}
   .grp-grid{grid-template-columns:1fr;margin-top:2rem;gap:1rem}
   .grp{padding:1.8em 1.5em}
 }
+
+/* recruit: open position */
+.position{background:linear-gradient(var(--ink),var(--deep))}
+.pos-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:4.5rem;align-items:start}
+.pos-tag{display:inline-block;font-family:var(--mono);font-size:max(.7rem,11px);letter-spacing:.3em;text-transform:uppercase;color:var(--ink);background:var(--gold);padding:.45em 1em;margin-bottom:1.6rem}
+.pos-intro .sec-title{margin-bottom:.4em}
+.pos-catch{font-family:var(--serif);font-size:clamp(1.05rem,1.6vw,1.25rem);letter-spacing:.08em;color:var(--gold-hi);margin-bottom:1.4em}
+.pos-intro p:not(.pos-catch){color:var(--s2);font-size:.92rem;margin-bottom:1em}
+.pos-intro .hl{color:var(--s0);font-weight:400}
+.pos-intro .btn{margin-top:1.6em}
+.pos-table-wrap{border:1px solid var(--bord2);background:linear-gradient(160deg,var(--deep),var(--mid));padding:.6em 2.2em;position:relative}
+.pos-table-wrap::before{content:'';position:absolute;left:0;top:0;right:0;height:1px;background:var(--gold-line);opacity:.7}
+.pos-table{width:100%;border-collapse:collapse}
+.pos-table tr+tr th,.pos-table tr+tr td{border-top:1px solid var(--border)}
+.pos-table th{width:34%;text-align:left;vertical-align:top;padding:1.35em .8em 1.35em 0;font-family:var(--serif);font-weight:400;font-size:.92rem;letter-spacing:.1em;color:var(--s0)}
+.pos-table th .en{display:block;font-family:var(--eng);font-style:italic;font-size:.8rem;letter-spacing:.06em;color:var(--gold);margin-top:.2em}
+.pos-table td{padding:1.35em 0;font-size:.9rem;color:var(--s1);line-height:1.9}
+.pos-table td strong{font-family:var(--serif);font-weight:400;font-size:1.15rem;letter-spacing:.06em;color:var(--gold-hi)}
+.pos-table td .sub{display:block;font-size:.8rem;color:var(--s3)}
+@media(max-width:860px){
+  .pos-grid{grid-template-columns:1fr;gap:2.5rem}
+  .pos-intro .btn{width:100%;max-width:340px;justify-content:center}
+  .pos-table-wrap{padding:.3em 1.3em}
+  .pos-table th,.pos-table td{display:block;width:auto;padding:0}
+  .pos-table th{padding-top:1.2em}
+  .pos-table td{padding:.35em 0 1.2em;border-top:none!important}
+}

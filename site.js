@@ -33,7 +33,10 @@
   if(!document.getElementById('form-body')){
     cta=document.createElement('div');
     cta.className='m-cta';
-    cta.innerHTML='<a class="primary" href="contact.html">無料相談を申し込む →</a><a href="tel:0367668441">電話する</a>';
+    var isRecruit=!!document.getElementById('position');
+    cta.innerHTML=isRecruit
+      ? '<a class="primary" href="contact.html">エントリーする →</a><a href="tel:0367668441">電話で問い合わせ</a>'
+      : '<a class="primary" href="contact.html">無料相談を申し込む →</a><a href="tel:0367668441">電話する</a>';
     document.body.appendChild(cta);
   }
 
