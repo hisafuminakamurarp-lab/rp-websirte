@@ -171,3 +171,18 @@ h1,h2,.big{word-break:auto-phrase}
   .val-list .val p{grid-column:2;font-size:.95rem}
   .val-list .val h3{font-size:1.25rem}
 }
+
+/* group companies */
+.group{background:linear-gradient(var(--deep),var(--ink))}
+.grp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.grp{position:relative;border:1px solid var(--border);padding:2.4em 2.2em;background:linear-gradient(160deg,var(--deep),var(--mid));transition:border-color .4s,transform .4s,box-shadow .4s}
+.grp::before{content:'';position:absolute;left:0;top:0;height:1px;width:0;background:var(--gold);transition:width .5s cubic-bezier(.2,.6,.2,1)}
+.grp:hover{border-color:rgba(205,189,136,.45);transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.28)}
+.grp:hover::before{width:100%}
+.grp-en{font-family:var(--eng);font-style:italic;color:var(--gold);font-size:.95rem;letter-spacing:.08em}
+.grp h3{font-family:var(--serif);font-weight:400;font-size:1.12rem;letter-spacing:.08em;line-height:1.7;color:var(--s0);margin:.7em 0 .9em}
+.grp p{color:var(--s2);font-size:.86rem;line-height:1.95}
+@media(max-width:860px){
+  .grp-grid{grid-template-columns:1fr;margin-top:2rem;gap:1rem}
+  .grp{padding:1.8em 1.5em}
+}
