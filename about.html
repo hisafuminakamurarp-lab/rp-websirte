@@ -131,6 +131,7 @@ footer{border-top:1px solid var(--border);padding:4.5rem 6vw 3rem;background:var
   section{padding:5.5rem 6vw}
 }
 </style>
+<link rel="stylesheet" href="site.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -254,8 +255,8 @@ footer{border-top:1px solid var(--border);padding:4.5rem 6vw 3rem;background:var
     </div>
     <div class="f-col">
       <h4>Service</h4>
-      <a href="service.html">Life Planning｜ライフプランニング</a>
-      <a href="service.html">Career Planning｜キャリアプランニング</a>
+      <a href="service.html#life-planning">Life Planning｜ライフプランニング</a>
+      <a href="service.html#career-planning">Career Planning｜キャリアプランニング</a>
       <a href="contact.html">Contact｜無料相談</a>
     </div>
   </div>
@@ -267,4 +268,5 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.querySelector('nav').classList.remove('open')));
 </script>
+<script src="site.js"></script>
 </body></html>

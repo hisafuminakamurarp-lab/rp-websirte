@@ -133,6 +133,7 @@ footer{border-top:1px solid var(--border);padding:4.5rem 6vw 3rem;background:var
   section{padding:5.5rem 6vw}
 }
 </style>
+<link rel="stylesheet" href="site.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -170,7 +171,7 @@ footer{border-top:1px solid var(--border);padding:4.5rem 6vw 3rem;background:var
 <div class="phero">
   <div class="watermark">Service</div>
   <p class="eyebrow">Service — Life Design</p>
-  <h1>人生全体を見渡して、<br>いま必要な<em>一歩</em>を。</h1>
+  <h1><span class="nw">人生全体を</span><span class="nw">見渡して、</span><br><span class="nw">いま必要な</span><em>一歩</em>を。</h1>
   <p class="en">Life Planning × Career Planning</p>
   <p class="sub">お金と暮らし。仕事と将来。ふたつの視点から、人生全体をひとつの設計図として整理します。営業ではなく、アドバイスとサポートに徹します。</p>
 </div>
@@ -294,4 +295,5 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.querySelector('nav').classList.remove('open')));
 </script>
+<script src="site.js"></script>
 </body></html>
