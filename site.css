@@ -213,3 +213,6 @@ h1,h2,.big{word-break:auto-phrase}
   .pos-table th{padding-top:1.2em}
   .pos-table td{padding:.35em 0 1.2em;border-top:none!important}
 }
+
+/* contact: sending state */
+.fsub:disabled{opacity:.6;cursor:wait}
