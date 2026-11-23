@@ -200,7 +200,7 @@ footer{border-top:1px solid var(--border);padding:4.5rem 6vw 3rem;background:var
         </div>
         <div class="fg"><label class="fl" for="fe">メールアドレス<span class="freq">*</span></label><input class="fi" id="fe" name="email" type="email" autocomplete="email" placeholder="example@email.com" required></div>
         <div class="fg"><label class="fl" for="ft">お問い合わせ種別<span class="freq">*</span></label>
-          <select class="fi" id="ft" name="お問い合わせ種別" required><option value="" disabled selected>選択してください</option><option>ライフプランニングの相談</option><option>キャリアプランニングの相談</option><option>採用・入社について</option><option>サービスについての質問</option><option>その他</option></select>
+          <select class="fi" id="ft" name="お問い合わせ種別" required><option value="" disabled selected>選択してください</option><option>FP相談（家計・資産形成・住まい）</option><option>キャリア相談（キャリア設計・転職・独立）</option><option>採用・入社について</option><option>サービスについての質問</option><option>その他</option></select>
         </div>
         <div class="fg"><label class="fl" for="fm">お問い合わせ内容<span class="freq">*</span></label><textarea class="fi" id="fm" name="お問い合わせ内容" placeholder="ご相談内容をお聞かせください..." required></textarea></div>
         <p class="fnote">※ ご入力いただいた個人情報は、お問い合わせへの対応のみに使用し、第三者への提供は行いません。</p>
@@ -250,10 +250,14 @@ document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>doc
 // Formspree AJAX送信
 const form = document.getElementById("form-body");
 const submitBtn = form.querySelector(".fsub");
-// 採用ページからの遷移時は種別を「採用・入社について」に
-if (new URLSearchParams(location.search).get("type") === "recruit") {
-  const sel = document.getElementById("ft");
-  [...sel.options].forEach(o => { if (o.text === "採用・入社について") o.selected = true; });
+// ?type=recruit / fp / career で種別を自動選択
+{
+  const TYPE_LABEL = { recruit: "採用・入社について", fp: "FP相談（家計・資産形成・住まい）", career: "キャリア相談（キャリア設計・転職・独立）" };
+  const label = TYPE_LABEL[new URLSearchParams(location.search).get("type")];
+  if (label) {
+    const sel = document.getElementById("ft");
+    [...sel.options].forEach(o => { if (o.text === label) o.selected = true; });
+  }
 }
 // 送信先: Google Apps Script（スプレッドシート記録＋メール・Slack通知）。失敗時は Formspree に送る
 const GAS_URL = "https://script.google.com/macros/s/AKfycbwwiGrhnO6z74iRiOWEhiKxUVWThQ4-9xaXZJ_o-DudxHEpZg4lLHQQGPKkYlX44G9p/exec";
