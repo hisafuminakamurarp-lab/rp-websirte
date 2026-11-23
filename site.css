@@ -570,3 +570,12 @@ select.fi{width:100%;text-overflow:ellipsis}
 .fc-wb p{font-family:var(--serif);font-size:.98rem;letter-spacing:.1em;color:var(--s0);margin-top:.2em}
 @media(max-width:1000px){.fc-list{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:700px){.fc-list{grid-template-columns:1fr}.fc-list li{display:grid;grid-template-columns:2.4rem 1fr;column-gap:.6rem;padding:1.2em 1.1em}.fc-list li>*{grid-column:2}.fc-no{grid-column:1!important;grid-row:1/4}.fc-list p{margin-top:.2em}}
+
+/* recruit: merged philosophy & growth */
+.pg-step{margin-top:3rem;display:flex;align-items:baseline;gap:1em;font-family:var(--serif);font-size:1.05rem;letter-spacing:.1em;color:var(--s0)}
+.pg-step span{font-family:var(--eng);font-style:italic;font-size:.95rem;color:var(--gold);letter-spacing:.04em;white-space:nowrap}
+.pg-step + .fc-list{margin-top:1.4rem}
+.pg-bridge{width:1px;height:3rem;margin:2.6rem auto 0;background:linear-gradient(rgba(205,189,136,.15),rgba(205,189,136,.7))}
+.capital .role-flow{margin-top:1.8rem}
+.pg-close{margin-top:2.6rem;font-family:var(--serif);font-size:clamp(1.05rem,1.8vw,1.3rem);letter-spacing:.08em;line-height:1.9;color:var(--gold-hi)}
+@media(max-width:700px){.pg-step{flex-direction:column;gap:.2em}}
