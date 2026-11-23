@@ -84,10 +84,19 @@ nav a:hover{color:var(--gold)}
 .col-thumb .t1{white-space:nowrap;margin-top:6%;font-family:var(--serif);font-weight:400;font-size:6.4cqi;letter-spacing:.08em;color:var(--s0);line-height:1.6}
 .col-thumb .t2{white-space:nowrap;font-family:var(--serif);font-weight:600;font-size:7.2cqi;letter-spacing:.08em;color:var(--ink);background:linear-gradient(135deg,#e6d9ab,var(--gold));padding:.1em .7em;margin-top:.5em;line-height:1.6}
 .col-thumb .soon{position:absolute;bottom:1rem;right:1rem;font-family:var(--mono);font-size:.58rem;letter-spacing:.3em;color:var(--gold);text-transform:uppercase}
+.col-thumb .cs-en{font-family:var(--eng);font-style:italic;font-weight:300;font-size:11cqi;letter-spacing:.06em;line-height:1.2;
+  background:linear-gradient(100deg,#eef3fb 0%,#b8c8dc 45%,#c8b882 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.col-thumb .cs-ja{margin-top:.8em;font-family:var(--mono);font-size:.62rem;letter-spacing:.4em;color:var(--gold)}
+.col-body .sk{display:block;height:.7em;border-radius:2px;margin-bottom:.95em;width:100%;
+  background:linear-gradient(90deg,rgba(180,205,235,.06) 0%,rgba(180,205,235,.14) 50%,rgba(180,205,235,.06) 100%);background-size:200% 100%;animation:skMove 2.8s ease-in-out infinite}
+.col-body .sk-s{width:30%;margin-bottom:1.3em;background-color:rgba(200,184,130,.12)}
+.col-body .sk-m{width:62%}
+@keyframes skMove{0%{background-position:100% 0}100%{background-position:-100% 0}}
+@media(prefers-reduced-motion:reduce){.col-body .sk{animation:none}}
 .col-body{padding:1.5rem 1.6rem 1.4rem;display:flex;flex-direction:column;flex:1}
 .col-body .cat{font-size:.72rem;letter-spacing:.14em;color:var(--gold);margin-bottom:.7em}
 .col-body h3{font-family:var(--sans);font-weight:400;font-size:.95rem;line-height:1.85;letter-spacing:.04em;color:var(--s0);flex:1}
-.col-meta{margin-top:1.2em;padding-top:1em;border-top:1px solid var(--border);font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;color:var(--s3);text-transform:uppercase}
+.col-meta{margin-top:auto;padding-top:1em;border-top:1px solid var(--border);font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;color:var(--s3);text-transform:uppercase}
 .cta{background:radial-gradient(90% 120% at 50% 100%,var(--lift) 0%,var(--deep) 55%,var(--ink) 100%);text-align:center;padding:10rem 6vw}
 .cta h2{font-family:var(--serif);font-weight:300;font-size:clamp(1.4rem,3vw,2.2rem);letter-spacing:.12em;color:var(--s0);margin:1em 0 .8em}
 .cta p{color:var(--s2);max-width:36em;margin:0 auto;font-size:.92rem}
@@ -176,17 +185,17 @@ footer{border-top:1px solid var(--border);padding:4.5rem 6vw 3rem;background:var
 <section class="col-list">
   <div class="inner">
     <div class="col-grid">
-      <article class="col-card rv">
-        <div class="col-thumb" aria-hidden="true"><span class="tag">お金・資産形成</span><span class="t1">資産形成は、</span><span class="t2">何から始める？</span><span class="soon">Coming Soon</span></div>
-        <div class="col-body"><p class="cat">お金・資産形成</p><h3>資産形成は、何から始める？｜最初に整えておきたい3つのこと</h3><p class="col-meta">Coming Soon｜近日公開</p></div>
+      <article class="col-card rv" aria-label="近日公開">
+        <div class="col-thumb" aria-hidden="true"><span class="cs-en">Coming Soon</span><span class="cs-ja">近日公開</span></div>
+        <div class="col-body" aria-hidden="true"><span class="sk sk-s"></span><span class="sk"></span><span class="sk sk-m"></span><p class="col-meta">Coming Soon｜近日公開</p></div>
       </article>
-      <article class="col-card rv">
-        <div class="col-thumb" aria-hidden="true"><span class="tag">キャリア・転職</span><span class="t1">転職を考えたら</span><span class="t2">最初に整理すること</span><span class="soon">Coming Soon</span></div>
-        <div class="col-body"><p class="cat">キャリア・転職</p><h3>転職を考えはじめたら、最初に整理したいこと｜後悔しない判断の軸のつくり方</h3><p class="col-meta">Coming Soon｜近日公開</p></div>
+      <article class="col-card rv" aria-label="近日公開">
+        <div class="col-thumb" aria-hidden="true"><span class="cs-en">Coming Soon</span><span class="cs-ja">近日公開</span></div>
+        <div class="col-body" aria-hidden="true"><span class="sk sk-s"></span><span class="sk"></span><span class="sk sk-m"></span><p class="col-meta">Coming Soon｜近日公開</p></div>
       </article>
-      <article class="col-card rv">
-        <div class="col-thumb" aria-hidden="true"><span class="tag">住まい・不動産</span><span class="t1">賃貸か、購入か。</span><span class="t2">ライフプランで考える</span><span class="soon">Coming Soon</span></div>
-        <div class="col-body"><p class="cat">住まい・不動産</p><h3>賃貸か、購入か｜住まい選びをライフプランから考える</h3><p class="col-meta">Coming Soon｜近日公開</p></div>
+      <article class="col-card rv" aria-label="近日公開">
+        <div class="col-thumb" aria-hidden="true"><span class="cs-en">Coming Soon</span><span class="cs-ja">近日公開</span></div>
+        <div class="col-body" aria-hidden="true"><span class="sk sk-s"></span><span class="sk"></span><span class="sk sk-m"></span><p class="col-meta">Coming Soon｜近日公開</p></div>
       </article>
     </div>
   </div>
