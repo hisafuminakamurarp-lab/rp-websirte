@@ -634,3 +634,17 @@ select.fi{width:100%;text-overflow:ellipsis}
 .svf p{font-size:.84rem;line-height:1.9;color:var(--s2);margin-top:.3em}
 @media(max-width:1000px){.svf{grid-template-columns:repeat(2,1fr)}.svf li::after{display:none}}
 @media(max-width:600px){.svf{grid-template-columns:1fr}}
+
+/* recruit: growth & leadership */
+.gl-text{max-width:46em;margin-top:1.4rem}
+.gl-text p{color:var(--s1);font-size:.96rem;line-height:2.1;margin-bottom:.6em}
+.gl-text .gl-close{margin-top:1.2em;font-family:var(--serif);font-size:clamp(1.05rem,1.8vw,1.3rem);letter-spacing:.06em;color:var(--gold-hi)}
+.gl-list{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.6rem}
+.gl-list li{position:relative;border:1px solid var(--border);background:linear-gradient(160deg,var(--deep),var(--mid));padding:1.8em 1.5em;display:flex;flex-direction:column;gap:.35em}
+.gl-list li:not(:last-child)::after{content:'';position:absolute;right:-.62rem;top:50%;border-left:7px solid var(--gold);border-top:5px solid transparent;border-bottom:5px solid transparent;transform:translateY(-50%);z-index:1}
+.gl-no{font-family:var(--eng);font-style:italic;font-size:1.5rem;color:var(--gold);line-height:1}
+.gl-en{font-size:max(.7rem,11px);letter-spacing:.2em;text-transform:uppercase;color:var(--s3)}
+.gl-list b{font-family:var(--serif);font-weight:400;font-size:1.15rem;letter-spacing:.08em;color:var(--s0);margin-top:.3em;line-height:1.6}
+.gl-list p{font-size:.86rem;line-height:1.9;color:var(--s2)}
+.gl-note{margin-top:1.8rem;font-size:.86rem;color:var(--s3);line-height:1.9;max-width:46em}
+@media(max-width:860px){.gl-list{grid-template-columns:1fr}.gl-list li::after{display:none}}
