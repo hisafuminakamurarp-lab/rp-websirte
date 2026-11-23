@@ -348,3 +348,5 @@ select.fi{width:100%;text-overflow:ellipsis}
 @media(max-width:400px){.os-svc{grid-template-columns:1fr}}
 .os-experts{display:flex;flex-wrap:wrap;gap:.4em;margin-top:.5em}
 .os-experts span{font-size:.72rem;color:var(--s1);border:1px solid rgba(205,189,136,.35);padding:.2em .7em;white-space:nowrap}
+.os-experts{flex-direction:column;gap:.4em}
+.os-experts>div{display:flex;flex-wrap:wrap;gap:.4em}
