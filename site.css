@@ -242,6 +242,9 @@ a.svc-card.svc-link:hover .svc-more .arw{transform:translateX(4px)}
 /* CTA without heading: space between label and text */
 .cta .cta-label + p{margin-top:1.8em}
 
+/* reassurance line: same gold style on every page (some pages had no base style) */
+.cta .free{font-family:var(--mono);color:var(--gold);letter-spacing:.25em;text-transform:uppercase;margin-top:1.6em}
+
 /* reassurance line (初回相談無料 / …): always one line */
 .hero .free,.cta .free,.phero .free{white-space:nowrap}
 @media(max-width:860px){
