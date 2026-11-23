@@ -654,3 +654,6 @@ select.fi{width:100%;text-overflow:ellipsis}
 .gl-head .gl-en{color:var(--gold)}
 .gl-head .gl-no{font-size:1rem;color:var(--s3)}
 .gl-banner{margin-top:1.6rem;border:1px solid rgba(205,189,136,.55);padding:1.1em 1.4em;font-family:var(--serif);font-size:clamp(1rem,1.7vw,1.2rem);letter-spacing:.06em;color:var(--gold-hi);line-height:1.8}
+/* one-stop: expert chips = professions, themes as plain text */
+.os-experts>div{align-items:center}
+.os-experts i{font-style:normal;font-size:.72rem;color:var(--s2);white-space:nowrap}

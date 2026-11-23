@@ -180,7 +180,7 @@ footer{border-top:1px solid var(--border);padding:4.5rem 6vw 3rem;background:var
     <!-- info -->
     <div class="ci rv">
       <div class="ci-label">— Information</div>
-      <div class="ci-row"><span class="ci-k">Response</span><span class="ci-v">通常1〜2営業日以内にご連絡します</span></div>
+      <div class="ci-row"><span class="ci-k">Response</span><span class="ci-v">1〜2営業日以内にご連絡します</span></div>
       <div class="ci-row"><span class="ci-k">Consultation</span><span class="ci-v">初回相談は無料です</span></div>
       <div class="ci-row"><span class="ci-k">Tel（会社）</span><span class="ci-v"><a href="tel:0367668441">03-6766-8441</a></span></div>
       <div class="ci-row"><span class="ci-k">Tel（代表直通）</span><span class="ci-v"><a href="tel:07085219870">070-8521-9870</a></span></div>
@@ -204,7 +204,7 @@ footer{border-top:1px solid var(--border);padding:4.5rem 6vw 3rem;background:var
           <select class="fi" id="ft" name="お問い合わせ種別" required><option value="" disabled selected>選択してください</option><optgroup label="個人のお客様"><option>FP相談（家計・資産形成・住まい）</option><option>キャリア相談（キャリア設計・転職・独立）</option><option>サービスについての質問</option></optgroup><optgroup label="法人・事業者の方"><option>お取引・協業のご相談</option><option>商材・サービスのお取り扱い依頼</option><option>営業・ご提案</option></optgroup><optgroup label="その他"><option>採用・入社について</option><option>取材・メディア掲載について</option><option>その他</option></optgroup></select>
         </div>
         <div class="fg"><label class="fl" for="fm">お問い合わせ内容<span class="freq">*</span></label><textarea class="fi" id="fm" name="お問い合わせ内容" placeholder="ご相談内容をお聞かせください..." required></textarea></div>
-        <p class="fnote">※ ご入力いただいた個人情報は、お問い合わせへの対応のみに使用し、第三者への提供は行いません。</p>
+        <p class="fnote">※ ご入力いただいた個人情報は、プライバシーポリシーに基づき適切に取り扱います。</p>
         <label class="privacy-check">
           <input type="checkbox" id="privacy-agree" required>
           <span><a href="privacy.html" target="_blank">プライバシーポリシー</a>をお読みいただき、同意の上送信してください。</span>
@@ -293,6 +293,9 @@ form.addEventListener("submit", async function(e) {
     }
     form.style.display = "none";
     const ok = document.getElementById("ok");
+    if (data.get("お問い合わせ種別") === "採用・入社について") {
+      ok.querySelector(".s-body").innerHTML = "ご応募ありがとうございます。<br>内容を確認のうえ、1週間以内に面談日程をご連絡いたします。";
+    }
     ok.style.display = "block";
     ok.scrollIntoView({ behavior: "smooth", block: "center" });
   } catch (err) {
