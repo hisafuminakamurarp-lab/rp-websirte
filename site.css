@@ -660,3 +660,6 @@ select.fi{width:100%;text-overflow:ellipsis}
 .os-ext,.ext-link{color:inherit;border-bottom:1px solid rgba(200,184,130,.45);transition:color .3s}
 .os-ext:hover,.ext-link:hover{color:var(--gold)}
 .os-ext span,.ext-link span,.grp-link span{font-size:.8em;margin-left:.2em;color:var(--gold)}
+/* recruit: growth & fulfillment / your future */
+.bond .cm2-label{margin-bottom:.8em}
+.kwh.gf b{letter-spacing:.14em;font-size:1.25rem}
