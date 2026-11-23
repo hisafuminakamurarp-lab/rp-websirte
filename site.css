@@ -313,3 +313,8 @@ a.svc-card.svc-link:hover .svc-more .arw{transform:translateX(4px)}
 .c-grid>*{min-width:0}
 .fi{max-width:100%;min-width:0}
 select.fi{width:100%;text-overflow:ellipsis}
+
+/* recruit: hiring steps without orphan cells (4 → 2 → 1 columns) */
+.flow-steps{grid-template-columns:repeat(4,1fr)!important}
+@media(max-width:1000px){.flow-steps{grid-template-columns:repeat(2,1fr)!important}}
+@media(max-width:600px){.flow-steps{grid-template-columns:1fr!important}}
