@@ -547,3 +547,8 @@ select.fi{width:100%;text-overflow:ellipsis}
 }
 .cm-node::after{display:none!important}
 .cm-node{position:relative}
+/* culture node looks like the other capital nodes until selected */
+.cm-culture{background:var(--ink);border-color:var(--border);color:var(--s1);font-size:1.05rem}
+.cm-culture small{color:var(--s2)}
+.cm-culture:hover{border-color:rgba(205,189,136,.45)}
+.cm-culture[aria-selected="true"]{border-color:var(--gold);background:linear-gradient(160deg,var(--mid),var(--lift));color:var(--s0)}
