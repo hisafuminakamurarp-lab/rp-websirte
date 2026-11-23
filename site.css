@@ -616,3 +616,21 @@ select.fi{width:100%;text-overflow:ellipsis}
   .kwh{grid-template-columns:1fr}
   .wv,.bond{text-align:left}
 }
+
+/* recruit: benefits list in job table */
+.pos-list{list-style:none;display:flex;flex-direction:column;gap:.35em}
+.pos-list li::before{content:'— ';color:var(--gold)}
+.pos-list .sub{display:inline!important;margin-left:.6em}
+
+/* service: consultation flow */
+.sv-flow-sec{background:linear-gradient(var(--ink),var(--deep))}
+.svf{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.6rem;counter-reset:svf}
+.svf li{position:relative;border:1px solid var(--border);background:linear-gradient(160deg,var(--deep),var(--mid));padding:1.8em 1.4em;display:flex;flex-direction:column;gap:.35em}
+.svf li:not(:last-child)::after{content:'';position:absolute;right:-.62rem;top:50%;border-left:7px solid var(--gold);border-top:5px solid transparent;border-bottom:5px solid transparent;transform:translateY(-50%);z-index:1}
+.svf-no{font-family:var(--eng);font-style:italic;font-size:1.6rem;color:var(--gold);line-height:1}
+.svf-en{font-size:max(.7rem,11px);letter-spacing:.2em;text-transform:uppercase;color:var(--s3)}
+.svf b{font-family:var(--serif);font-weight:400;font-size:1.2rem;letter-spacing:.12em;color:var(--s0);margin-top:.3em}
+.svf-free{align-self:flex-start;font-style:normal;font-size:.72rem;letter-spacing:.15em;color:var(--ink);background:var(--gold);padding:.15em .7em}
+.svf p{font-size:.84rem;line-height:1.9;color:var(--s2);margin-top:.3em}
+@media(max-width:1000px){.svf{grid-template-columns:repeat(2,1fr)}.svf li::after{display:none}}
+@media(max-width:600px){.svf{grid-template-columns:1fr}}
