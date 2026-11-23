@@ -350,3 +350,67 @@ select.fi{width:100%;text-overflow:ellipsis}
 .os-experts span{font-size:.72rem;color:var(--s1);border:1px solid rgba(205,189,136,.35);padding:.2em .7em;white-space:nowrap}
 .os-experts{flex-direction:column;gap:.4em}
 .os-experts>div{display:flex;flex-wrap:wrap;gap:.4em}
+
+/* ===== recruit: message lead ===== */
+.phero-lead{font-family:var(--serif);font-size:clamp(1rem,1.6vw,1.2rem);letter-spacing:.1em;color:var(--gold-hi);margin:-.2em 0 1.6em}
+
+/* ===== recruit: five capitals + well-being ===== */
+.capital{background:linear-gradient(var(--deep),var(--ink))}
+.cap-wrap{margin-top:2.6rem;max-width:980px}
+.cap-list{display:flex;flex-direction:column;gap:.7rem}
+.cap{border:1px solid var(--border);background:linear-gradient(160deg,var(--deep),var(--mid));transition:border-color .3s}
+.cap[open],.cap:hover{border-color:rgba(205,189,136,.45)}
+.cap summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:3.2rem 11rem 1fr 1.6rem;align-items:center;gap:1rem;padding:1.3em 1.6em}
+.cap summary::-webkit-details-marker{display:none}
+.cap-no{font-family:var(--eng);font-style:italic;font-size:1.5rem;color:var(--gold);line-height:1}
+.cap-name{font-family:var(--serif);font-size:1.12rem;letter-spacing:.1em;color:var(--s0);display:flex;flex-direction:column}
+.cap-name small{font-family:var(--eng);font-style:italic;font-size:.82rem;letter-spacing:.06em;color:var(--s3)}
+.cap-def{font-size:.88rem;color:var(--s2);line-height:1.8}
+.cap-toggle{position:relative;width:14px;height:14px;justify-self:end}
+.cap-toggle::before,.cap-toggle::after{content:'';position:absolute;left:0;top:50%;width:14px;height:1px;background:var(--gold);transition:transform .3s}
+.cap-toggle::after{transform:rotate(90deg)}
+.cap[open] .cap-toggle::after{transform:rotate(0)}
+.cap-body{padding:0 1.6em 1.5em calc(1.6em + 4.2rem);display:grid;grid-template-columns:1fr 1fr;gap:1rem 2rem}
+.cap-body p{font-size:.86rem;color:var(--s1);line-height:1.9;border-top:1px solid var(--border);padding-top:.9em}
+.cap-body b{display:block;font-family:var(--serif);font-weight:400;font-size:.8rem;letter-spacing:.12em;color:var(--gold);margin-bottom:.3em}
+.cap-arrow{width:1px;height:2.6rem;margin:1rem auto;background:linear-gradient(rgba(205,189,136,.15),var(--gold));position:relative}
+.cap-arrow::after{content:'';position:absolute;left:-3.5px;bottom:-1px;border-left:3.5px solid transparent;border-right:3.5px solid transparent;border-top:6px solid var(--gold)}
+.wb{text-align:center;border:1px solid rgba(205,189,136,.6);background:linear-gradient(160deg,var(--mid),var(--lift));box-shadow:0 0 0 6px rgba(205,189,136,.06),0 18px 40px rgba(0,0,0,.3);padding:2.2em 1.6em}
+.wb-en{font-family:var(--eng);font-style:italic;font-size:1.9rem;color:var(--gold-hi);letter-spacing:.04em}
+.wb-title{font-family:var(--serif);font-size:1.05rem;letter-spacing:.1em;color:var(--s0);margin:.4em 0 .8em}
+.wb-text{max-width:36em;margin:0 auto;font-size:.86rem;color:var(--s2)}
+@media(max-width:860px){
+  .cap summary{grid-template-columns:2.4rem 1fr 1.2rem;gap:.3rem .8rem;padding:1.1em 1.1em}
+  .cap-def{grid-column:2/3;font-size:.82rem}
+  .cap-toggle{grid-row:1;grid-column:3}
+  .cap-body{grid-template-columns:1fr;padding:0 1.1em 1.2em}
+}
+
+/* ===== recruit: career value ===== */
+.career-value{background:var(--ink)}
+.cv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:2.6rem}
+.cv{border:1px solid var(--border);background:linear-gradient(160deg,var(--deep),var(--mid));padding:1.8em 1.5em;position:relative}
+.cv::before{content:'';position:absolute;left:0;top:0;height:1px;width:0;background:var(--gold);transition:width .5s}
+.cv:hover::before{width:100%}
+.cv-en{font-family:var(--eng);font-style:italic;font-size:.88rem;color:var(--gold)}
+.cv h3{font-family:var(--serif);font-weight:400;font-size:1.1rem;letter-spacing:.1em;color:var(--s0);margin:.5em 0 .7em}
+.cv p{font-size:.84rem;color:var(--s2);line-height:1.9}
+@media(max-width:1000px){.cv-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.cv-grid{grid-template-columns:1fr}}
+
+/* ===== recruit: career path ===== */
+.career-path{background:linear-gradient(var(--ink),var(--deep))}
+.cp-list{list-style:none;display:grid;grid-template-columns:repeat(6,1fr);margin-top:2.8rem;border-top:1px solid var(--bord2);position:relative}
+.cp-list li{padding:1.6em 1em 0 0;position:relative;display:flex;flex-direction:column;gap:.4em}
+.cp-list li::before{content:'';position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--ink);border:1px solid var(--gold)}
+.cp-list li:last-child::before{background:var(--gold)}
+.cp-no{font-family:var(--eng);font-style:italic;font-size:.9rem;color:var(--gold)}
+.cp-list b{font-family:var(--serif);font-weight:400;font-size:1.2rem;letter-spacing:.15em;color:var(--s0)}
+.cp-list li>span:last-child{font-size:.8rem;color:var(--s2);line-height:1.8}
+@media(max-width:1000px){.cp-list{grid-template-columns:repeat(3,1fr);row-gap:2rem}}
+@media(max-width:600px){
+  .cp-list{grid-template-columns:1fr;border-top:none;border-left:1px solid var(--bord2);margin-left:.4rem;row-gap:1.6rem}
+  .cp-list li{padding:0 0 0 1.4em}
+  .cp-list li::before{top:.3em;left:-5px}
+}
+@media(max-width:380px){.pos-intro .sec-title{font-size:1.4rem!important;letter-spacing:.03em}.pos-catch .nw{display:inline}}
