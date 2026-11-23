@@ -1,0 +1,137 @@
+<!DOCTYPE html><html lang="ja"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ページが見つかりません｜ROCK PTARMIGAN</title>
+<meta name="robots" content="noindex, follow">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#07101f;--deep:#0c1728;--mid:#152238;--lift:#1c2f4e;
+  --s0:#f4f7fd;--s1:#dce6f4;--s2:#b8c8dc;--s3:#8095ae;--s4:#4a5f76;
+  --gold:#c8b882;--border:rgba(180,205,235,.1);--bord2:rgba(180,205,235,.22);
+  --serif:'Noto Serif JP',serif;--eng:'Cormorant Garamond',serif;--mono:'Space Mono',monospace;--sans:'Noto Sans JP',sans-serif;
+}
+html{scroll-behavior:smooth;background:var(--ink)}
+body{background:var(--ink);color:var(--s1);font-family:var(--sans);font-weight:300;line-height:1.9;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+::selection{background:rgba(200,184,130,.25)}
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:linear-gradient(rgba(180,205,235,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(180,205,235,.035) 1px,transparent 1px);
+  background-size:72px 72px}
+
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
+  padding:18px 4vw;background:linear-gradient(rgba(7,16,31,.92),rgba(7,16,31,.75) 70%,transparent);backdrop-filter:blur(6px)}
+.logo{font-family:var(--eng);font-size:1.05rem;letter-spacing:.35em;color:var(--s0);display:flex;align-items:center;gap:.6em}
+.logo .mark{font-family:var(--eng);font-style:italic;color:var(--gold);font-size:1.2em}
+.logo .logo-mark-img{height:1.4em;width:auto;display:block}
+nav{display:flex;align-items:center;gap:2.2em;font-family:var(--mono);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase}
+nav a{color:var(--s2);transition:color .3s}
+nav a:hover{color:var(--gold)}
+.nav-cta{border:1px solid var(--bord2);padding:.65em 1.4em;color:var(--s0);transition:.3s}
+.nav-cta:hover{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.menu-btn{display:none}
+
+/* page hero */
+.phero{position:relative;min-height:40svh;display:flex;flex-direction:column;justify-content:flex-end;padding:9rem 6vw 3.5rem;z-index:1;
+  background:radial-gradient(120% 90% at 75% 10%,var(--mid) 0%,var(--deep) 45%,var(--ink) 100%);overflow:hidden}
+.eyebrow{font-family:var(--mono);font-size:.68rem;letter-spacing:.4em;color:var(--s3);text-transform:uppercase;display:flex;align-items:center;gap:1em}
+.eyebrow::before{content:'';display:block;width:3em;height:1px;background:var(--s4)}
+.phero h1{font-family:var(--serif);font-weight:300;font-size:clamp(1.7rem,4vw,3rem);line-height:1.55;letter-spacing:.06em;color:var(--s0);margin:.7em 0 .3em}
+.phero .updated{font-family:var(--mono);font-size:.62rem;letter-spacing:.25em;color:var(--s4);text-transform:uppercase}
+
+/* policy body */
+.policy{position:relative;z-index:1;padding:5rem 6vw 8rem;background:var(--deep)}
+.policy-inner{max-width:760px}
+.policy h2{font-family:var(--serif);font-weight:400;font-size:1.15rem;letter-spacing:.12em;color:var(--s0);margin:3rem 0 1rem;padding-bottom:.7em;border-bottom:1px solid var(--border);display:flex;align-items:baseline;gap:.8em}
+.policy h2::before{content:'✦';color:var(--gold);font-size:.7em}
+.policy h2:first-of-type{margin-top:0}
+.policy p{color:var(--s2);font-size:.9rem;margin-bottom:1em}
+.policy ul{list-style:none;margin:1em 0;display:flex;flex-direction:column;gap:.6em}
+.policy li{font-size:.88rem;color:var(--s2);display:flex;gap:.8em;align-items:baseline}
+.policy li::before{content:'—';color:var(--gold);font-family:var(--eng)}
+.policy a.link{color:var(--gold);border-bottom:1px solid rgba(200,184,130,.4)}
+
+/* footer */
+footer{border-top:1px solid var(--border);padding:4.5rem 6vw 3rem;background:var(--ink);position:relative;z-index:1}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:3rem}
+.f-brand .logo{margin-bottom:1.6em}
+.f-brand p{font-size:.8rem;color:var(--s3);line-height:2.1}
+.f-col h4{font-family:var(--mono);font-size:.62rem;letter-spacing:.3em;color:var(--s3);text-transform:uppercase;margin-bottom:1.4em}
+.f-col a{display:block;font-size:.82rem;color:var(--s2);padding:.45em 0;transition:color .3s}
+.f-col a:hover{color:var(--gold)}
+.copyright{margin-top:4rem;padding-top:1.6rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1em;font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;color:var(--s4)}
+
+@media(max-width:860px){
+  nav{display:none}
+  .menu-btn{display:block;background:none;border:1px solid var(--bord2);color:var(--s1);font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;padding:.7em 1.2em;cursor:pointer}
+  nav.open{display:flex;position:fixed;inset:0;background:rgba(7,16,31,.97);flex-direction:column;justify-content:center;align-items:center;gap:2.4em;font-size:.85rem;z-index:99}
+  .f-grid{grid-template-columns:1fr}
+}
+</style>
+<link rel="stylesheet" href="/site.css">
+
+</head><body>
+
+<header>
+  <a class="logo" href="/"><img class="logo-mark-img" src="/logo-sm.png" alt="">ROCK PTARMIGAN</a>
+  <button class="menu-btn" onclick="document.querySelector('nav').classList.toggle('open')">MENU</button>
+  <nav>
+    <a href="/about.html">About Us</a>
+    <a href="/service.html">Service</a>
+    <a href="/recruit.html">Recruit</a>
+    <a href="/profile.html">Profile</a>
+    <a class="nav-cta" href="/contact.html">無料相談</a>
+  </nav>
+</header>
+
+<div class="phero">
+  <p class="eyebrow">404 Not Found</p>
+  <h1>ページが見つかりません</h1>
+  <p class="updated">お探しのページは移動または削除された可能性があります。</p>
+</div>
+
+<div class="policy">
+  <div class="policy-inner">
+    <p>URLに誤りがないかご確認のうえ、以下のページからお探しください。</p>
+    <ul>
+      <li><a href="/">トップページ</a></li>
+      <li><a href="/service.html">サービス内容</a></li>
+      <li><a href="/recruit.html">採用情報</a></li>
+      <li><a href="/contact.html">無料相談・お問い合わせ</a></li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  <div class="f-grid">
+    <div class="f-brand">
+      <a class="logo" href="/"><img class="logo-mark-img" src="/logo-sm.png" alt="">ROCK PTARMIGAN</a>
+      <p>株式会社ROCK PTARMIGAN<br>〒161-0034 東京都新宿区上落合2丁目21番10号<br>TEL：03-6766-8441／代表直通：070-8521-9870</p>
+    </div>
+    <div class="f-col">
+      <h4>Company</h4>
+      <a href="/about.html">About Us｜私たちについて</a>
+      <a href="/profile.html">Profile｜会社概要</a>
+      <a href="/recruit.html">Recruit｜採用情報</a>
+      <a href="/privacy.html">Privacy Policy</a>
+    </div>
+    <div class="f-col">
+      <h4>Service</h4>
+      <a href="/service.html#life-planning">Life Planning｜ライフプランニング</a>
+      <a href="/service.html#career-planning">Career Planning｜キャリアプランニング</a>
+      <a href="/contact.html">Contact｜無料相談</a>
+    </div>
+  </div>
+  <div class="copyright"><span>© ROCK PTARMIGAN Co., Ltd. All Rights Reserved.</span><span>Life Design × Capital Strategy</span></div>
+</footer>
+
+<script>
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.querySelector('nav').classList.remove('open')));
+</script>
+<script src="/site.js"></script>
+</body></html>
