@@ -40,6 +40,29 @@
     document.body.appendChild(cta);
   }
 
+
+  // five-capital tabs (recruit page)
+  document.querySelectorAll('.ct').forEach(function(box){
+    var tabs=[].slice.call(box.querySelectorAll('.ct-tab'));
+    function select(t,focus){
+      tabs.forEach(function(x){
+        var on=x===t;
+        x.setAttribute('aria-selected',on?'true':'false');
+        x.tabIndex=on?0:-1;
+        var p=document.getElementById(x.getAttribute('aria-controls'));
+        if(p) p.hidden=!on;
+      });
+      if(focus) t.focus();
+    }
+    tabs.forEach(function(t,i){
+      t.addEventListener('click',function(){select(t)});
+      t.addEventListener('keydown',function(e){
+        if(e.key==='ArrowRight'||e.key==='ArrowDown'){e.preventDefault();select(tabs[(i+1)%tabs.length],true)}
+        if(e.key==='ArrowLeft'||e.key==='ArrowUp'){e.preventDefault();select(tabs[(i-1+tabs.length)%tabs.length],true)}
+      });
+    });
+  });
+
   window.addEventListener('scroll',onScroll,{passive:true});
   onScroll();
 
