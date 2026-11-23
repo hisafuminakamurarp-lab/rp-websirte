@@ -657,3 +657,9 @@ select.fi{width:100%;text-overflow:ellipsis}
 /* one-stop: expert chips = professions, themes as plain text */
 .os-experts>div{align-items:center}
 .os-experts i{font-style:normal;font-size:.72rem;color:var(--s2);white-space:nowrap}
+/* links to group sites */
+.grp-link{display:inline-flex;align-items:center;gap:.5em;margin-top:1.2em;font-size:.8rem;letter-spacing:.1em;color:var(--gold);border-bottom:1px solid rgba(200,184,130,.4);padding-bottom:.15em;transition:color .3s,border-color .3s}
+.grp-link:hover{color:var(--s0);border-color:var(--s0)}
+.os-ext,.ext-link{color:inherit;border-bottom:1px solid rgba(200,184,130,.45);transition:color .3s}
+.os-ext:hover,.ext-link:hover{color:var(--gold)}
+.os-ext span,.ext-link span,.grp-link span{font-size:.8em;margin-left:.2em;color:var(--gold)}
