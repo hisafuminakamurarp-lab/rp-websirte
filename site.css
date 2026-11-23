@@ -648,3 +648,9 @@ select.fi{width:100%;text-overflow:ellipsis}
 .gl-list p{font-size:.86rem;line-height:1.9;color:var(--s2)}
 .gl-note{margin-top:1.8rem;font-size:.86rem;color:var(--s3);line-height:1.9;max-width:46em}
 @media(max-width:860px){.gl-list{grid-template-columns:1fr}.gl-list li::after{display:none}}
+
+/* recruit 03 final: card header row + closing banner */
+.gl-head{display:flex;justify-content:space-between;align-items:baseline}
+.gl-head .gl-en{color:var(--gold)}
+.gl-head .gl-no{font-size:1rem;color:var(--s3)}
+.gl-banner{margin-top:1.6rem;border:1px solid rgba(205,189,136,.55);padding:1.1em 1.4em;font-family:var(--serif);font-size:clamp(1rem,1.7vw,1.2rem);letter-spacing:.06em;color:var(--gold-hi);line-height:1.8}
