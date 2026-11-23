@@ -579,3 +579,13 @@ select.fi{width:100%;text-overflow:ellipsis}
 .capital .role-flow{margin-top:1.8rem}
 .pg-close{margin-top:2.6rem;font-family:var(--serif);font-size:clamp(1.05rem,1.8vw,1.3rem);letter-spacing:.08em;line-height:1.9;color:var(--gold-hi)}
 @media(max-width:700px){.pg-step{flex-direction:column;gap:.2em}}
+
+/* philosophy & growth: center the step areas */
+.capital .pg-step{justify-content:center;text-align:center}
+.capital .role-text{margin-left:auto;margin-right:auto;text-align:center}
+.capital .role-flow{margin-left:auto;margin-right:auto}
+.capital .cp-paths{justify-content:center}
+.capital .pg-close{text-align:center}
+.capital .cp-note{margin-left:auto;margin-right:auto;text-align:center;border-left:none;padding-left:0;border-top:1px solid rgba(205,189,136,.35);padding-top:1.4em;max-width:36em}
+.capital .fc-wb{max-width:980px;margin-left:auto;margin-right:auto}
+@media(max-width:700px){.capital .role-text{text-align:left}.capital .cp-paths{justify-content:flex-start}}
