@@ -238,3 +238,6 @@ a.svc-card.svc-link:hover .svc-more .arw{transform:translateX(4px)}
 .svc-all{margin-top:3.5rem;text-align:center}
 /* anchor targets: keep clear of the fixed header */
 .svc-block[id],.svc-card[id]{scroll-margin-top:120px}
+
+/* CTA without heading: space between label and text */
+.cta .cta-label + p{margin-top:1.8em}
