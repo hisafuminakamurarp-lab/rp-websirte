@@ -414,3 +414,26 @@ select.fi{width:100%;text-overflow:ellipsis}
   .cp-list li::before{top:.3em;left:-5px}
 }
 @media(max-width:380px){.pos-intro .sec-title{font-size:1.4rem!important;letter-spacing:.03em}.pos-catch .nw{display:inline}}
+
+/* recruit v2: Synthesis → Well-being, career possibilities */
+.wb{padding:2em 1.6em!important}
+.wb-row{max-width:38em;margin:0 auto}
+.wb-arrow{width:1px;height:1.8rem;margin:1.2rem auto;background:linear-gradient(rgba(205,189,136,.2),var(--gold));position:relative}
+.wb-arrow::after{content:'';position:absolute;left:-3.5px;bottom:-1px;border-left:3.5px solid transparent;border-right:3.5px solid transparent;border-top:6px solid var(--gold)}
+.wb-row:first-child .wb-en{font-size:1.5rem;color:var(--s1)}
+.cp3{display:grid;grid-template-columns:repeat(3,1fr);margin-top:2.6rem;border-top:1px solid var(--bord2)}
+.cp3-item{padding:1.6em 1.4em 0 0;position:relative;display:flex;flex-direction:column;gap:.45em}
+.cp3-item::before{content:'';position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--ink);border:1px solid var(--gold)}
+.cp3-item:last-child::before{background:var(--gold)}
+.cp3-item b{font-family:var(--serif);font-weight:400;font-size:1.3rem;letter-spacing:.15em;color:var(--s0)}
+.cp3-item>span:last-child{font-size:.86rem;color:var(--s2);line-height:1.9}
+.cp-paths{margin-top:2.6rem;display:flex;align-items:center;gap:1.2em;flex-wrap:wrap}
+.cp-paths-label{font-size:max(.7rem,11px);letter-spacing:.2em;color:var(--s3)}
+.cp-paths ul{list-style:none;display:flex;flex-wrap:wrap;gap:.6em}
+.cp-paths li{font-family:var(--serif);font-size:.92rem;letter-spacing:.1em;color:var(--s0);border:1px solid rgba(205,189,136,.45);padding:.45em 1.2em}
+.cp-note{margin-top:2.4rem;font-family:var(--serif);font-size:.98rem;line-height:2.1;color:var(--s1);border-left:1px solid rgba(205,189,136,.45);padding-left:1.4em;max-width:40em}
+@media(max-width:700px){
+  .cp3{grid-template-columns:1fr;border-top:none;border-left:1px solid var(--bord2);margin-left:.4rem;row-gap:1.6rem}
+  .cp3-item{padding:0 0 0 1.4em}
+  .cp3-item::before{top:.35em;left:-5px}
+}
