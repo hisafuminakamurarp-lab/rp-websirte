@@ -436,3 +436,10 @@ select.fi{width:100%;text-overflow:ellipsis}
   .cp3-item{padding:0 0 0 1.4em}
   .cp3-item::before{top:.35em;left:-5px}
 }
+
+/* recruit hero copy */
+.phero-q{font-family:var(--serif);font-size:clamp(1.05rem,1.7vw,1.3rem)!important;letter-spacing:.08em;color:var(--s0)!important;margin:1.4em 0 1.1em!important}
+.phero-close{font-family:var(--serif);font-size:clamp(1rem,1.5vw,1.15rem)!important;letter-spacing:.08em;color:var(--gold-hi)!important;margin-top:1.4em!important}
+.phero-lead{color:var(--s0)!important;font-size:clamp(1.05rem,1.8vw,1.35rem)!important;margin-bottom:.4em!important}
+.phero-lead + .phero-body{margin-top:1.2em}
+.phero-q{font-size:clamp(1.15rem,2vw,1.5rem)!important;margin-top:0!important}
