@@ -247,3 +247,7 @@ a.svc-card.svc-link:hover .svc-more .arw{transform:translateX(4px)}
 @media(max-width:860px){
   .hero .free,.cta .free,.phero .free{letter-spacing:.04em!important;font-size:clamp(9px,2.6vw,11px)!important}
 }
+
+/* CTA: keep the reassurance line centered (no width cap) and the heading on one line on phones */
+.cta .free{max-width:none!important}
+@media(max-width:860px){.cta h2{letter-spacing:.04em!important;font-size:clamp(1.25rem,6.2vw,1.9rem)!important}}
