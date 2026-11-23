@@ -42,4 +42,13 @@
 
   window.addEventListener('scroll',onScroll,{passive:true});
   onScroll();
+
+  // deep links (service.html#job-change etc.): align after web fonts settle the layout
+  if(location.hash.length>1){
+    var target=document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if(target){
+      var ready=(document.fonts&&document.fonts.ready)?document.fonts.ready:Promise.resolve();
+      ready.then(function(){requestAnimationFrame(function(){target.scrollIntoView({behavior:'instant',block:'start'})})});
+    }
+  }
 })();

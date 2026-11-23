@@ -228,3 +228,13 @@ h1,h2,.big{word-break:auto-phrase}
 
 /* contact: honeypot field (hidden from people, filled only by bots) */
 .hp-field{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+
+/* ---------- top: service cards → links to service.html (SEO Step2) ---------- */
+a.svc-card.svc-link{display:flex;flex-direction:column;color:inherit;text-decoration:none}
+a.svc-card.svc-link p.desc{flex:1}
+.svc-card .svc-more{margin-top:1.6em;font-family:var(--serif);font-size:.78rem;letter-spacing:.18em;color:var(--gold);display:inline-flex;align-items:center;gap:.6em}
+.svc-card .svc-more .arw{transition:transform .3s}
+a.svc-card.svc-link:hover .svc-more .arw{transform:translateX(4px)}
+.svc-all{margin-top:3.5rem;text-align:center}
+/* anchor targets: keep clear of the fixed header */
+.svc-block[id],.svc-card[id]{scroll-margin-top:120px}
