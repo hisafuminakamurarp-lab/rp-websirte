@@ -241,3 +241,9 @@ a.svc-card.svc-link:hover .svc-more .arw{transform:translateX(4px)}
 
 /* CTA without heading: space between label and text */
 .cta .cta-label + p{margin-top:1.8em}
+
+/* reassurance line (初回相談無料 / …): always one line */
+.hero .free,.cta .free,.phero .free{white-space:nowrap}
+@media(max-width:860px){
+  .hero .free,.cta .free,.phero .free{letter-spacing:.04em!important;font-size:clamp(9px,2.6vw,11px)!important}
+}
