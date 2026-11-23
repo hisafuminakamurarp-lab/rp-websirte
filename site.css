@@ -552,3 +552,21 @@ select.fi{width:100%;text-overflow:ellipsis}
 .cm-culture small{color:var(--s2)}
 .cm-culture:hover{border-color:rgba(205,189,136,.45)}
 .cm-culture[aria-selected="true"]{border-color:var(--gold);background:linear-gradient(160deg,var(--mid),var(--lift));color:var(--s0)}
+
+/* five capitals — public summary (details kept internal) */
+.fc-lead{max-width:46em;margin-top:1.4rem}
+.fc-q{font-family:var(--serif);font-size:clamp(1.05rem,1.8vw,1.3rem);line-height:2;letter-spacing:.06em;color:var(--s0);margin-bottom:.8em}
+.fc-lead p:not(.fc-q){color:var(--s2);font-size:.95rem}
+.fc-list{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:2.6rem}
+.fc-list li{border:1px solid var(--border);background:linear-gradient(160deg,var(--deep),var(--mid));padding:1.6em 1.2em;display:flex;flex-direction:column;gap:.35em;position:relative}
+.fc-list li::before{content:'';position:absolute;left:0;top:0;height:1px;width:0;background:var(--gold);transition:width .5s}
+.fc-list li:hover::before{width:100%}
+.fc-no{font-family:var(--eng);font-style:italic;font-size:.9rem;color:var(--gold)}
+.fc-list b{font-family:var(--serif);font-weight:400;font-size:1.15rem;letter-spacing:.1em;color:var(--s0)}
+.fc-en{font-family:var(--eng);font-style:italic;font-size:.78rem;color:var(--s3)}
+.fc-list p{margin-top:.5em;font-size:.84rem;line-height:1.8;color:var(--s2)}
+.fc-wb{margin-top:1.6rem;text-align:center;border:1px solid rgba(205,189,136,.55);background:linear-gradient(160deg,var(--mid),var(--lift));padding:1.4em 1em}
+.fc-wb .wb-en{font-family:var(--eng);font-style:italic;font-size:1.6rem;color:var(--gold-hi)}
+.fc-wb p{font-family:var(--serif);font-size:.98rem;letter-spacing:.1em;color:var(--s0);margin-top:.2em}
+@media(max-width:1000px){.fc-list{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.fc-list{grid-template-columns:1fr}.fc-list li{display:grid;grid-template-columns:2.4rem 1fr;column-gap:.6rem;padding:1.2em 1.1em}.fc-list li>*{grid-column:2}.fc-no{grid-column:1!important;grid-row:1/4}.fc-list p{margin-top:.2em}}
