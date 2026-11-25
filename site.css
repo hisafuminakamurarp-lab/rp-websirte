@@ -167,8 +167,11 @@ h1,h2,.big{word-break:auto-phrase}
 .val-list .val h3{margin:0;font-size:1.5rem;letter-spacing:.3em}
 .val-list .val p{margin:0;font-family:var(--serif);font-size:1.02rem;color:var(--s1)}
 @media(max-width:860px){
-  .val-list .val{grid-template-columns:3rem 1fr;gap:.4rem 1rem;padding:1.6em 1.3em}
-  .val-list .val p{grid-column:2;font-size:.95rem}
+  .val-list .val{grid-template-columns:2.6rem 1fr;gap:.5rem 1rem;padding:1.8em 1.3em;align-items:start}
+  .val-list .val .v-no{grid-row:1 / span 2;font-size:2rem;padding-top:.1em}
+  .val-list .v-head,.val-list .v-body{grid-column:2}
+  .val-list .val p{font-size:.98rem;line-height:1.9}
+  .val-list .v-body .v-desc{margin-top:.5em;font-size:.86rem;line-height:1.9}
   .val-list .val h3{font-size:1.25rem}
 }
 
